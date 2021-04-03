@@ -7,6 +7,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -14,6 +16,7 @@ public class MainActivity extends AppCompatActivity {
     Button btn_test;
     private Button btn_move;
     private String str;
+    private ImageView img_test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +26,15 @@ public class MainActivity extends AppCompatActivity {
         editText = findViewById(R.id.editText);
         btn_test = findViewById(R.id.btn_test);
         btn_move = findViewById(R.id.btn_move);
+        img_test = (ImageView)findViewById(R.id.img_test);
+
+        img_test.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getApplicationContext(), "Hello World!!", Toast.LENGTH_SHORT).show();
+            }
+        });
+
 
         btn_move.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
 
 
     }
