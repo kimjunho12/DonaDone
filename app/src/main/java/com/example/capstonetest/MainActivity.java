@@ -17,6 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btn_move;
     private String str;
     private ImageView img_test;
+    private Button btn_sign_up;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
         btn_test = findViewById(R.id.btn_test);
         btn_move = findViewById(R.id.btn_move);
         img_test = (ImageView)findViewById(R.id.img_test);
+        btn_sign_up = findViewById(R.id.btn_sign_up);
 
         img_test.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -54,6 +56,13 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btn_sign_up.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MainActivity.this, SignUpActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
